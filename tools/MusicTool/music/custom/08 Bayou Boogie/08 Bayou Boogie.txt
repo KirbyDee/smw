@@ -1,0 +1,365 @@
+#amk 2
+
+#spc
+{
+#title   "Bayou Boogie"
+#game    "Donkey Kong Country 2"
+#author  "David Wise"
+#comment "Ported by KevinM"
+}
+
+#path "bayou-boogie"
+#samples
+{
+#default
+"08.brr"
+"0a.brr"
+"0b.brr"
+"0e.brr"
+"14.brr"
+"16.brr"
+"17.brr"
+"18.brr"
+"19.brr"
+"1a.brr"
+"1b.brr"
+"1c.brr"
+"1e.brr"
+"1f.brr"
+"1d.brr"
+"20.brr"
+"21.brr"
+"22.brr"
+"23.brr"
+"24.brr"
+}
+
+#instruments
+{
+"24.brr" $cc $a8 $00 $01 $88 ; @30 synth voice (bass)
+"24.brr" $ae $a4 $00 $06 $1a ; @31 synth voice
+"0e.brr" $ff $59 $00 $04 $d5 ; @32 pitch envelope
+"08.brr" $af $fc $00 $04 $d5 ; @33 kick
+"17.brr" $af $fc $00 $04 $d5 ; @34 snare
+"1e.brr" $8f $e5 $00 $09 $84 ; @35 pizzicato strings
+"1f.brr" $9f $ea $00 $01 $40 ; @36 glockenspiel
+"1d.brr" $df $6f $00 $0e $50 ; @37 pan flute
+"20.brr" $9f $b0 $00 $02 $44 ; @38 marimba
+"21.brr" $df $90 $00 $06 $0b ; @39 something
+"22.brr" $df $85 $00 $06 $16 ; @40 blown bottle
+"0e.brr" $df $90 $00 $04 $c8 ; @41 pitch envelope
+"1d.brr" $df $90 $00 $03 $9d ; @42 pan flute
+"23.brr" $de $90 $00 $03 $04 ; @43 pitch envelope
+"0b.brr" $8e $f2 $00 $01 $ea ; @44 bird whistle
+"18.brr" $8f $f2 $00 $04 $9e ; @45 vibraslap
+"18.brr" $fc $f4 $00 $08 $e7 ; @46 vibraslap
+"0a.brr" $9f $ef $00 $03 $b0 ; @47 metal hit
+"1c.brr" $fb $28 $00 $03 $bc ; @48 sine-like synth
+"19.brr" $e9 $4f $00 $06 $fe ; @49 triangle-like synth
+"1a.brr" $a8 $af $00 $01 $ff ; @50 violin synth
+"1b.brr" $8f $ab $00 $04 $7e ; @51 tuba
+"16.brr" $de $92 $00 $09 $6e ; @52 hi-hat
+"16.brr" $fe $5b $00 $09 $6e ; @53 hi-hat
+"14.brr" $88 $e5 $00 $06 $19 ; @54 synth strings
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w182       t38
+
+; Original vol.: w255
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $51 $46 $46
+$f1 $02 $32 $01
+$f5 $77 $08 $08 $20 $00 $00 $00 $00
+
+;==================;
+;      Macros      ;
+;==================;
+"I24_1 = @30"
+"I24_2 = @31"
+"I0e_1 = @32 v195"
+"I08   = @33 v234"
+"I17c  = @34 v254 $fa$03$44 c $fa$03$00"
+"I1e   = @35"
+"I1f   = @36"
+"I1d_1 = @37"
+"I20   = @38"
+"I21   = @39"
+"I22   = @40"
+"I0e_2 = @41"
+"I1d_2 = @42"
+"I23   = @43"
+"I0b   = @44"
+"I18_1 = @45"
+"I18_2 = @46"
+"I0a   = @47"
+"I1c   = @48"
+"I19   = @49"
+"I1a   = @50"
+"I1b   = @51"
+"I16_1 = @52"
+"I16_2 = @53"
+"I14   = @54"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f4$02
+I1c o6 q7f
+v44 y15 $ee$7a f=15 $dd$00$1c g+ y5 f=27 $dd$00$1c g+
+v52 y13 [f=15 $dd$00$1c g+ f=29 $dd$00$1c g+ ^=10 $dd$02$08 g]
+v57 y4 *
+[[$ee$7a y13 * y7 * $ee$e8 y16 * y4 *]]7
+$ee$7a v50 y13 * v47 y8 * v37 y12 * r2 $ee$00
+
+(00)[
+I24_2 v81 y9 l8 o2 q7f p8,36,26
+[[b > c g < b4 > c < e a]]2
+[[b > c a e4 g d e <]]2
+> f e d c < a4. > d16 e16 
+f e d c4 g c c4. 
+< g b4 > c < e a 
+b > c < g b4 > c < e a
+r1^1 $df
+]
+
+(61)[I14 v87 y8 o2
+e a b > c < b a e f]2
+
+/
+
+(61)4
+[[f a b > c < b a e f]]2
+(61)4
+
+(99)[r2]4
+
+v167 y10 o4 q7f $f4$03 [[
+I16_1 (70)[$f4$01 $ee$60 c+=1 $ee$08 c+=2 $ee$60 c+=3 $ee$bb c+=2 $ee$15 d=3 $ee$69 d=3 $ee$bb d=3 $ee$10 d+=5 $ee$60 d+=2 $f4$01]
+I16_2 (70) r (70) r (70)
+I16_1 (70)
+I16_2 (70)
+]]4
+
+$f4$03 $ee$00 (00)
+
+(61)2
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+(99)16
+
+(14)[
+I1f y10 o1 q7f
+v185 a2. a4 a2. g4 a2. a4 a2. b4
+v160 > c2. c4 c1
+
+I1d_1 v100 o2 l16 $f4$03
+q7f y8 a8 g q77 y12 a q7f y8 f q77 y12 g q7f y8 e q77 y12 f q7f y8 f q77 y12 e8 f8. q7f y8 f g 
+a q77 y12 f q7f y8 g q77 y12 a q7f y8 f q77 y12 g q7f y8 e q77 y12 f8 e q7f y8 > c8 < g q77 y12 > c < q7f y8 a q77 y12 g 
+a8 r1... y10 $f4$03
+]
+
+o1 q7f
+[[
+(10)[v185 I20 a I21 a I22 a I0e_2 > c+ < I1d_2 a v244 I23 a v185 I21 a v208 I22 a]3
+(11)[v185 I20 a I21 a I22 a I0e_2 > c+ < I1d_2 g v244 I23 g v185 I21 g v208 I22 g]
+]]2
+
+/
+
+(10)3
+(12)[v185 I20 a I21 a I22 a I0e_2 > c+ < I1d_2 b v244 I23 b v185 I21 b v208 I22 b]
+$fa$02$03 (10)4
+$fa$02$05 (10)3 (12)
+$fa$02$08 (10)3 (12)
+$fa$02$00 [[ (10)3 (11) ]]3
+(14)
+[[ (10)3 (11) ]]2
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+y10 o3 l8 q7f
+(20)[r I0e_1 c I08 c I0e_1 c4. I08 c4]18
+(21)[I08 c I0e_1 c I17c I0e_1 c4 c I17c I08 < a >]4
+
+/
+
+(21)8
+(99)8
+(20)12
+(21)4
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+v167 y10 o4 l8 q7f
+[[I16_1 (70) I16_2 (70) r (70) r (70) I16_1 (70) I16_2 (70)]]8
+
+I24_1 v234 o1 l2 $ee$00
+[a. a4  a. g4 
+a. a4 a. b4 
+> c. c4 c. c4 
+d. d4 d=120 e4. 
+f. f4 f. g4 <
+[[a. a4 a. g4]]2]
+
+/
+
+a. a4 a. b4
+> c. c4 c. c4
+d. d4 d. e4
+f. f4 f. g4 <
+[[a. a4 a. g4]]3
+*
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+r1
+
+$fa$03$0a
+[[
+I0b o4 q7f
+v220 y13 c-=3 c-=3 c-=3 c=5 c+=4 d=5 d+=7 d+=8 d+=8 r=47
+v255 y10 d+=3 d+=3 d+=3 g+=5 a=4 a+=8 a+=7 b=8 r=24
+
+I18_1 o1 $f4$03
+v164 [$f4$01 c+=2 $ee$b0 f+=2 $ee$00 b=2 > $ee$58 d=2 $ee$24 f=2 $ee$a0 g=1 $ee$c0 a=1 $ee$00 $f4$01]
+v95 * $f4$03
+
+I0b $ed$0f$f2 o4
+v249 y8 c-=3 c-=3 c-=3 c=4 c+=5 d=4 d+=8 d+=7 d+=6
+v254 y6 c-=3 c-=3 c-=3 c=5 c+=4 d=5 d+=7 d+=8 d+=8 r=83
+
+I18_1 $ed$7f$f4 v136 y9 o2
+$f4$01 $ee$58 f+=3 $ee$10 e=3 $ee$58 f+=3 $ee$60 g+=3 $ee$30 a+=2 $ee$d0 b=1 $ee$00 $f4$01
+
+I0a v190 y15 o4
+g=3 $ee$08 g+=3 $ee$18 a+=3 $ee$20 b=3 $ee$00
+]]10
+$fa$03$00 $f4$03
+
+r1^=30
+
+/
+
+I19 v130 o4 l16 p8,20,24 $f4$03
+q7f y11 (43)[e8 a g8. a e4.. d c d e8.] q7b y8 d e8. q77 y12 d e8. q74 y8 d e8.
+q7f y11 (42)[e8 a g8. a e2^8. a g8. a > c8. < b a=60]
+
+I1a v104 y12 o5
+(40)[f8 e d8. c < a3 r=20 > d e f8 e d8. c4 g8 c8 c1^8]
+
+I1b v112 y8 o4 (41)[p12,24,10
+a b > c8 c d e8 e4 d8 e1^8]
+
+(99)10
+
+y10 $f4$03
+(10)3 (11)
+(10)3 (12)
+$fa$02$03 (10)4
+$fa$02$05 (10)3 (12)
+$fa$02$08 (10)3 (12)
+$fa$02$00 [[ (10)3 (11) ]]2
+
+;==================;
+;    Channel #5    ;
+;==================;
+#6
+(99)20
+
+(50)[I1d_1 v100 o2 l16
+[[q7f y8 b q77 y12 a q7f y8 > c q77 y12 < b q7f y8 > g q77 y12 c q7f y8 < b q77 y12 > g8 < b q7f y8 > c8 < e q77 y12 > c q7f y8 < a q77 y12 e]]2
+q7f y8 b q77 y12 a > q7f y8 c q77 y12 < b q7f y8 > a q77 y12 c q7f y8 e q77 y12 a8 e q7f y8 g8 d q77 y12 g q7f y8 e q77 y12 d <
+q7f y8 b q77 y12 > e q7f y8 c q77 y12 < b q7f y8 > a q77 y12 c q7f y8 e q77 y12 a8 e q7f y8 g8 d q77 y12 g q7f y8 e q77 y12 d 
+q7f y8 f q77 y12 e q7f y8 e q77 y12 f q7f y8 d q77 y12 e q7f y8 c q77 y12 d q7f y8 < a q77 y12 > c8 < a8. q7f y8 > d e 
+f q77 y12 d q7f y8 e q77 y12 f q7f y8 d q77 y12 e q7f y8 c q77 y12 d8 c q7f y8 g8 c q77 y12 g q7f y8 c q77 y12 c 
+c4 q7f y8 < g q77 y12 > c q7f y8 < b q77 y12 g8 b q7f y8 > c8 < e q77 y12 > c q7f y8 < a q77 y12 e 
+q7f y8 b q77 y12 a q7f y8 > c q77 y12 < b q7f y8 g q77 y12 > c q7f y8 < b q77 y12 g8 b q7f y8 > c8 < e q77 y12 > c q7f y8 < a q77 y12 e]
+
+(99)8
+
+/
+
+r=30
+
+I19 $ed$66$48 v82 o4 l16 p8,30,24 $fa$02$00 $ee$00 ; <- prevent random in-game detunings
+q7f v79 y8 (43) v82 y11 d e8. q7a y9 d e8. q77 y12 d e8.
+q7f v79 y8 (42)
+
+I1a $ed$26$a8 v74 o5 q7f p12,24,24
+(40)
+
+I1b $ed$0f$a8 v70 y12 o4
+(41) r=66
+
+(99)13
+
+(50)
+
+(99)8
+
+;==================;
+;    Channel #6    ;
+;==================;
+#5
+(60)[I18_2 v72 y10 o4 q7f
+c16 $dd$01$0b <a+ ^16 $dd$03$09 >c-
+$f4$01 c+=1 $ee$a0 c=3 $ee$36 c=2 $ee$d0 c-=2 $f4$01 r12 $ee$00
+[[$f4$01 c=1 $ee$94 c-=3 $ee$28 c-=2 $ee$c0 < a+=2 $f4$01 r12 $ee$00]]2
+]36
+
+r1^1
+
+(01)[I1e v92 o2 l16
+q7f y11 e q7a y7 f q7f y11 a q7a y7 e q7f y11 b q7a y7 a q7f y11 > c < q7a y7 b
+q7f y11 b q7a y7 > c < q7f y11 a q7a y7 b q7f y11 e q7a y7 a q7f y11 f q7a y7 e]2
+
+/
+
+(01)4
+[[q7f y11 f q7a y7 f q7f y11 a q7a y7 f q7f y11 b q7a y7 a q7f y11 > c < q7a y7 b
+q7f y11 b q7a y7 > c < q7f y11 a q7a y7 b q7f y11 e q7a y7 a q7f y11 f q7a y7 e]]2
+(01)4
+
+(99)4
+
+(60)24
+
+(99)4
+
+(01)2
+
+;==================;
+;    Channel #7    ;
+;==================;
+#7
+(99)16
+
+v167 y10 o4 l8 q7f
+[[I16_1 (70) I16_2 (70) r (70) r (70) I16_1 (70) I16_2 (70)]]10
+
+(71)[$ee$00 I16_1 c+ I16_2 c+4 c+ I18_2 q73 c q7f I16_2 c+ I16_1 c+ I16_2 c+]4
+
+/
+
+(71)8
+
+(99)16
+
+[[I16_1 (70) I16_2 (70) r (70) r (70) I16_1 (70) I16_2 (70)]]8
+
+(71)4

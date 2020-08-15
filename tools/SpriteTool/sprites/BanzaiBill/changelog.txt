@@ -1,0 +1,8 @@
+1.1
+----
+Now compatible with pixi feature - 255 sprites per level
+
+1.12
+----
+Added the option to edit tilemap and palette with ease.
+You can also edit X speed, change sound effect and sound bank.

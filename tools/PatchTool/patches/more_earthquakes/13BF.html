@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function convert(value)
+{
+value = parseInt(value, 16);
+if((value > 0x24 && value <= 0x100) || value > 0x13B)
+{
+document.getElementById('a').innerHTML = "Invalid overworld level number!";
+}
+else
+{
+if(value > 0x100)
+{
+	value -= 0xDC;
+}
+document.getElementById('a').innerHTML = "Converted: " + value.toString(16).toUpperCase();
+}
+}
+</script>
+</head>
+<body>
+OW level number to RAM $13BF converter<br />
+<input id="thing" title="13BF" onkeyup="convert(this.value);" maxlength="3" />
+<span id="a">conversion result is in hex</span>
+</body>
+</html>

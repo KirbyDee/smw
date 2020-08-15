@@ -1,0 +1,36 @@
+777 -> carryable-pipe
+FFF -> pirahna-sideways
+FFE -> sideway-spring
+FFD -> sleeping-goomba
+FFC -> horizontal vine
+
+overworld katrina
+A0  -> FG1
+A1  -> FG2
+A2  -> FG3
+A3  -> FG4
+A4  -> FG5
+A5  -> FG6
+A6  -> FG5
+AF  -> AN2
+
+ship BG
+101  -> BG1
+102  -> BG2
+103  -> BG3
+
+80   -> pipe
+
+smb1
+B0   -> FG1
+B1   -> FG3
+B2   -> SP1
+B3   -> SP2
+B4   -> SP3
+B5   -> SP4
+
+key lock
+81   -> BG2
+
+revive
+82   -> SP3

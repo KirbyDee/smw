@@ -1,0 +1,5 @@
+1C5 = welcome level
+
+patch/vwfintrochars.asm -> change level intro text
+
+levels: 106, 22, 103, 111, 105

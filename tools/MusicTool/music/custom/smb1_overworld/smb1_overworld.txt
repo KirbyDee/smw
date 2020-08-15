@@ -1,0 +1,129 @@
+#amk 2
+
+#SPC
+{
+	#author "Koji Kondo"
+	#title "Overworld"
+	#game "Super Mario Bros. (nes) "
+}
+
+t30	;makes ticks line up closely with NTSC frames
+$f4 $02	;turns on light stacato, leaving 1 tick gap between notes
+
+#path "nes"
+#samples
+
+{
+#default
+;square wave samples:
+"square192.brr"
+"square128.brr"
+"square96.brr"
+"square64.brr"
+"square48.brr"
+"square32.brr"
+;triangle samples:
+"tri384.brr"
+"tri256.brr"
+"tri192.brr"
+"tri128.brr"
+}
+
+#instruments
+{
+;square instruments:
+"square192.brr" $bf $74 $00 $18 $00
+"square128.brr" $bf $74 $00 $10 $00
+"square96.brr" $bf $74 $00 $0c $00
+"square64.brr" $bf $74 $00 $08 $00
+"square48.brr" $bf $74 $00 $06 $00
+"square32.brr" $bf $74 $00 $04 $00
+;triangle instruments:
+"tri384.brr" $00 $00 $7f $18 $00
+"tri256.brr" $00 $00 $7f $10 $00
+"tri192.brr" $00 $00 $7f $0c $00
+"tri128.brr" $00 $00 $7f $08 $00
+}
+
+;some commands to make sample switching a little easier:
+"sq1=@30"
+"sq2=@31"
+"sq3=@32"
+"sq4=@33"
+"sq5=@34"
+"sq6=@35"
+"tr1=@36"
+"tr2=@37"
+"tr3=@38"
+"tr4=@39"
+"%= r=1"
+
+#0 l24 o4 v120
+(1)[r=1 sq5 e% e% r=9 e% r=9 sq4 c% sq5 e% r=9 g% r=62]
+/
+(2)[r=1 sq4 c% r=18 sq2 <g% r=18 e% r=18 sq3 a% r=9 b% r=9 a+% a% r=9 g% r=3 sq5 >e% r=3 g% r=3 a% r=9 f% g% r=9 e% r=9 sq4 c% d% sq3 <b% r=17]2
+(3)[r=19 sq5 >g% f+% f% sq4 d+% r=9 e% r=9 sq3 <g+% a% sq4 >c% r=9 sq3 <a% sq4 >c% d]
+(4)[r=19 sq5 g% f+% f% sq4 d+% r=9 e% r=9 sq6 >c% r=9 c% c% r=26]
+(3)
+(5)[r=19 sq4 <d+% r=18 d% r=18 c% r=62]
+(3)(4)(3)(5)
+(6)[r=1 sq4 c% c% r=9 c% r=9 c% d% r=9 e% c% r=9 sq3 <a% g% r=26]
+(7)[r=1 sq4 >c% c% r=9 c% r=9 c% d% e% r=71]
+(6)(1)(2)2
+(8)[r=1 sq4 e% c% r=9 sq3 <g% r=18 g+% r=9 a% sq5 >f% r=9 f% sq3 <a% r=26]
+(9)[r=1 sq3 b% r=3 sq5 >a% r=3 a% r=3 a% r=3 g% r=3 f% r=3 sq4 e% c% r=9 sq3 <a% g% r=26]
+(8)
+(10)[r=1 sq4 b% sq5 >f% r=9 f% f% r=3 sq4 e% r=3 d% r=3 c% r=62]
+(8)(9)(8)(10)
+(6)(7)(6)(1)
+(8)(9)(8)(10) 
+
+#1 l24 o3 v120
+(11)[r=1 sq3 f+% f+% r=9 f+% r=9 f+% f+% r=9 b% r=27 g r=27]
+/
+(12)[r=1 sq3 e% r=18 sq2 c% r=18 sq1 <g% r=18 sq2 >c% r=9 d% r=9 c+% c% r=9 c% r=3 sq3 g% r=3 b% r=3 >c% r=9 <a% b% r=9 a% r=9 sq2 e% f% d% r=17]2
+(13)[r=19 sq4 >e% d+% d% sq3 <b% r=9 >c% r=9 <e% f% g% r=9 sq2 c% e% f]
+(14)[r=19 sq4 >e% d+% d% sq3 <b% r=9 >c% r=9 f% r=9 f% f% r=26]
+(13)
+(15)[r=19 sq3 <g+% r=18 f% r=18 e% r=62]
+(13)(14)(13)(15)
+(16)[r=1 sq3 g+% g+% r=9 g+% r=9 g+% a+% r=9 g% sq2 e% r=9 e% c% r=26]
+(17)[r=1 sq3 g+% g+% r=9 g+% r=9 g+% a+% g% r=71]
+(16)(11)(12)2
+(18)[r=1 sq3 >c% <a% r=9 sq2 e% r=18 e% r=9 f% sq3 >c% r=9 c% sq2 <f% r=26]
+(19)[r=1 sq3 g% r=3 sq5 >f% r=3 f% r=3 f% r=3 sq4 e% r=3 d% r=3 sq3 c% <a% r=9 sq2 f% e% r=26]
+(18)
+(20)[r=1 sq3 g% sq4 >d% r=9 d% d% r=3 sq3 c% r=3 <b% r=3 sq3 g% sq2 e% r=9 e% c% r=26]
+(18)(19)(18)(20)
+(16)(17)(16)(11)
+(18)(19)(18)(20) 
+
+#2 l20 o3 v140
+(21)[tr1 d d r=9 d r=9 d d r=9 tr4 >g r=27 tr2 <g r=27]
+/
+(22)[tr2 g r=18 e r=18 tr1 c r=18 tr2 f r g r f+ f r e r=3 tr3 >c r=3 tr4 e r=3 f r d e r tr3 c r <a b g r=18]2
+(23)[tr1 c r=18 tr2 g r=18 tr3 >c r tr2 <f r=18 tr3 >c c r tr2 <f r]
+(24)[tr1 c r=18 tr2 e r=18 g tr3 >c r tr4 >g r g g r tr2 <<g r]
+(23)
+(25)[tr1 c r tr3 g+ r=18 a+ r=18 >c r=18 tr2 <g gr tr1 c r]
+(23)(24)(23)(25)
+(26)[tr1 <g+ r=18 tr2 >d+ r=18 tr3 g+ r g r=18 tr1 c r=18 <g r]3
+(21)
+(22)2
+(27)[tr1 >c r=18 tr2 f+ g r tr3 >c r tr2 <f r f r tr3 >c c tr2 <f r]
+(28)[tr2 d r=18 f g r b r g r g r tr3 >c c tr2 <g r]
+(27)
+(29)[tr3 g r=18 g g r=3 a r=3 b r=3 >c r <g r tr1 c r=27]
+(27)(28)(27)(29)
+(26)3 (21)
+(27)(28)(27)(29)
+
+#3 @30 l192 v100
+(30)[n1f [[ c=6  r=12  c=1  r=8]]2  c=6  r=12  c=6  r=21  c=6  r=12 [[ c=1 r=8]]3 ]
+/
+(31)[ n16 c  r=17  n1f c  r=11  c  r=5  c=6  r=12  c=1  r=11  c=1  r=5]24
+(30)4
+(31)8
+(32)[n1f  c=1  r=26  c=1  r=8  c=6  r=12  c=1  r=17]16
+(30)4
+(32)8

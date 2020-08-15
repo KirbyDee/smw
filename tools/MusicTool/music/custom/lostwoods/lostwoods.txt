@@ -1,0 +1,184 @@
+#amk 2
+
+#spc
+{
+	#title		"Lost Woods"
+	#game		"TLOZ - Ocarina of Time"
+	#author		"Koji Kondo"
+	#comment	"ported by Teows"
+}
+
+#path	"lostwoods"
+
+#samples
+{
+#optimized
+"Bassoon.brr"
+"Oboe.brr"
+"Ocarina.brr"
+"Pizzicato.brr"
+"Tambourine.brr"
+"Tambourine2.brr"
+}
+
+
+#instruments
+{
+"Bassoon.brr"		$FF $E0 $B8 $0A $6F	; @30
+"Oboe.brr"		$FC $E0 $B8 $03 $82	; @31
+"Ocarina.brr"		$FD $EB $B8 $05 $00	; @32
+"Pizzicato.brr"		$AC $34 $B8 $06 $0D	; @33
+"Tambourine.brr"	$00 $00 $7F $0A $90	; @35
+"Tambourine2.brr"	$00 $00 $7F $0A $DC	; @36
+}
+
+;____________________
+;		     |
+;      Defines       |
+;____________________|
+
+w185 t57
+
+$EF $FF $10 $E0
+$F1 $06 $40 $00
+$F4 $02
+
+(!100)[$F4 $09]
+(!101)[$ED $80 $BA]
+
+;____________________
+;		     |
+;   Channel 1 (#0)   |
+;____________________|
+
+#0
+(!100,-1) (!101,3)
+(1)[r2]2
+/
+@32 y10 o4 p24,15,25 v230
+f16. r32 a16 r16 b4f16 r16 a16 r16 b4
+f8 a16 r16 b16 r16 > e16. r32 d4< b16 r16 > c16 r16 
+< b8 g16 r16 e2^8 d16 r16 
+e8 g16 r16 e2^6r12
+f8 a16. r32 b8.. r32 f8 a16. r32 b4
+f8 a8 b16. r32 > e16. r32 d4< b16 r16 > c16 r16 
+e8 < b16 r16 g2^8 b16 r16 
+g8 d16 r16 e2.
+[r2]4
+v160
+f16. r32 g8 a4b8 > c16. r32 d4
+e8 f16. r32 g2.
+(1)4
+< f8 e16. r32 a8 g16. r32 b8 a16. r32 > c8 < b16. r32 
+> d8 c16. r32 e8 d16. r32 f8 e16. r32 < b16 > c16. r32 < a16 
+b1 r2.
+
+@33 o4 y15 v105
+b4
+
+;____________________
+;		     |
+;   Channel 2 (#1)   |
+;____________________|
+
+#1
+@34 o4 y10 v120
+q7Ec8 q7Bc16 c16 c8 c16 c16 c8 q7Fc4.
+/
+[[q7Ec8 q7Bc16 q7Cc16 q7Ec8 c8]]16
+[q7Dc8 q7Ac16 q7Bc16]24
+[[q7Dc8 q7Ac16 q7Bc16 q7Dc8 r8]]4
+*3 q7Dc8 q7Bc16 q7Dc8.
+q79c8 q7Bc8 q7Dc8 q7Fc4c4
+
+;____________________
+;		     |
+;   Channel 3 (#2)   |
+;____________________|
+
+#2
+@35 o4 y10 v240
+c2..c8
+/
+^2.
+[[c1]]8
+(1)7
+[[c2]]7 c4
+
+@33 o3 y15 v190
+e2e2q7Ee4.q7De8q7Fe4
+
+@35 o4 y10 v220
+c4
+
+;____________________
+;		     |
+;   Channel 4 (#3)   |
+;____________________|
+
+#3
+r1
+/
+@30 o5 p24,15,25 v140 y8 l16 q4F
+r8 (!100,-1) (!101,3)
+[c r c r c r8.]5
+c r c r4^16
+* c r c r4^16
+*5
+c r c r4^16
+* c r c r8.
+
+@33 o3 y15 v190 l4 (!100,0)
+r8 [[a a g g 
+> c c < a a]]3
+a8 a r8 a8 a r8
+g8 g r8 g8 g r8
+b b b q7Eb v225
+q7Ab8 q7Cb8 q7Db8 q7Fb
+>> $ED$7B$12 b4
+
+;____________________
+;		     |
+;   Channel 5 (#4)   |
+;____________________|
+
+#4
+(!100,-1) (!101,3)
+(1)2
+/
+@30 o4 p24,15,25 v140 y8 l16 q4F
+[ [[f8 a r a r a r f8 a r a r a r]]2
+[[e8 g r g r g r e8 g r g r c8]]2 ]2
+
+@31 v160 y12 q7F
+> q3Cd8 e8 q7Ff4 g8 q3Ea8 q7Fb4
+> c8 < q3Fb8 q7Fe2.
+q3Fd8 e8 q7Ff4 g8 q3Fa8 q7Fb4
+> c8 q3Fd8 q7Fe2.
+< q3Fd8 e8 q7Ff4 g8 q3Fa8 q7Fb4
+> c8 < q3Fb8 q7Fe2.
+d8 q3Fc8 q7Ff8 q3Fe8 q7Fg8 q3Ff8 q7Fa8 q3Fg8 
+q7Fb8 q3Fa8 > q7Fc8 < q3Fb8 > q7Fd8 q3Fc8 q7Fe16 q3Ff8 q7Fd16
+e1
+r2.
+
+@33 o3 y15 v175
+e4
+
+;____________________
+;		     |
+;   Channel 6 (#5)   |
+;____________________|
+
+#5
+(1)2
+/
+@33 o3 y15 v190
+[ [[f4 r4]]4 [[c4 r4]]4 ]2
+[[d8 f8 d8 f8 < g8 > d8 < g8 > d8 
+c8 e8 c8 e8 < a8 > e8 < a8 > e8 ]]3
+d8 f8 q5F f4 q7Fd8 f8 q5Ff4
+q7Fc8 e8 q5Fe4 q7Fc8 e8 e4 r8
+q5Fa4 a8 r8 a4 a8 
+r8 v210
+q7Ag+8 q7Cg+8 q7Dg+8 q7Fg+4 > e4

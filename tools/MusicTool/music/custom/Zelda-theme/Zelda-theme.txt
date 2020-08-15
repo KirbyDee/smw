@@ -1,0 +1,126 @@
+#am4
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+
+#0 w255 t62
+
+#0	@6	q7F v255 y14
+#1	@6	q7F v235 y8
+#2	@6	q7F v220 y9
+#3	@10	q7F v220 y3
+
+#0	o4	l32
+
+a+2r8ra+16ra+16ra+ra+16r
+a+16r16.g+16ra+4^16.r16a+16ra+16ra+ra+16r
+a+16r16.g+16ra+4.ra+16ra+16ra+ra+16r
+a+16.rfrfrf16.rfrfrf16.rfrfrf16.rf16.r/
+
+l16
+
+(1)[a+8^32r.f4.ra+a+>cdd+
+f2r8f.r32fr32f+g+.]
+
+a+2^r32a+a+.a+r32g+f+.
+g+r.f+.f2f4
+d+8d+ff+2f8d+8
+c+8c+d+f2d+8c+8
+c8cde2g4
+
+l32
+
+(2)[f16.r<frfrf16.rfrfrf16.rfrfrf16.rf16.r]
+
+(1)	o5
+
+l8
+
+a+2.>c+4
+cr<a4.^32r16.f4
+f+2^32r.r32a+4
+arf4.^32r16.f4
+f+2r4a+4
+arf2d4
+d+2r4f+4
+frc+2<a+4
+>cc16d16e2g4
+
+
+(2)
+
+
+
+
+#1	o4	l32
+
+d2r8rd16rd16rdrd16r
+c16r16.c16rc4^16.r8rc16rcrc16r
+c+16r16.c+16rc+4.rc+16rc+16rc+rc+16r
+c+8<arara16.rarara16.rarara16.ra16.r/
+
+l16
+
+(3)[>d8^32r.dr32dc.d8rddd+fg
+g+8.a+a+>cdd+f8f8<g+r32a+>c.]
+
+c+8.<f+f+g+a+>cc+8c+8c+r32c<a+.
+>c+r.<g+.g+r32g+f+.g+r.g+.g+r32f+g+.
+f+8^32f+32r32f32f+8.r32g+32a+4g+8f+8
+f8.r32d+32f8.r32f+32g+4f+8f8
+e4e8.fg8.r32a32a+8>c8
+
+l32
+
+(4)[<a16.r<arara16.rarara16.rarara16.ra16.r]
+
+(3)	o5
+
+c+2.e4
+d+8r8c4.^r16.<a4
+b2^r8.r>c+4
+c8r8<a4.^r16.a4
+b2r4>c+4
+c8r8<a2a4
+f+2r4b4
+a+8r8f2c+4
+e4e8.f16g8.raa+8>c8
+
+(4)
+
+
+#2	o2	l32
+
+(7)[a+8^r16.a+16ra+ra+16ra+8^r16.a+16ra+ra+16r
+g+8^r16.g+16rg+rg+16rg+8^r16.g+16rg+rg+16r
+f+8^r16.f+16rf+rf+16rf+8^r16.f+16rf+rf+16r
+f+8r8f16.r8rf16.r8rg8a8]/
+
+(5)[a+16.r8ra+16ra+rg+16ra+16.r8ra+16.r8r
+g+16.r8rg+16rg+rf+16rg+16.r8rg+16.r8r
+f+16.r8rf+16rf+re16rf+16.r8rf+16.r8r]
+
+>c+8r8c+16rc+16<b16.>c+8r8c+8r8
+<b8r8b16rb16a+16.b8r8b16rb16b16.
+a+8r8a+16ra+16g+16.a+8r8a+16ra+16a+16.
+>c8r8c16rc16<a+16.>c8r8c16rc16c16.
+<f16.r8rf16.r8rf16.r8rg8a8
+
+(5)
+
+f16.r8rf16rfrd+16.f16.r8rf16.r8r32
+
+[e16ra+r>c+16re16ra+r>c+16re16.r4.r
+f16.r8r<<f16rfrf16rf16.r4.r]2
+
+b16.r8rb16rbra+16rb16.r8rb16rbrb16r
+a+16.r8ra+16ra+rg+16ra+16.r8ra+16ra+ra+16r
+>c16.r8rc16rcrc16rc16.r8rc16rcrc16r
+<f16.r8rf16.r8.f16r8rg8a8
+
+#3	o3	l16
+
+[b2.b.bb.]3
+b4b4b4b8b8/
+
+[b4b.bb.b4b4]99

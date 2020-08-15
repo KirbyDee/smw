@@ -1,0 +1,126 @@
+;title=Zelda: Ocarina of Time - Lost Woods
+;author=Darius
+
+#0 q7f w200 t58 l16
+
+$ef $3f $10 $12
+$f1 $08 $50 $01
+
+@0 $ed $7c $e5 o3 y11 $de $12 $08 $1d v185
+
+r1 /
+>frarb8^rfrarb8^r
+frarbr>erd8^r<br>cr
+<brgre2r8dr
+ergre2r4
+frarb8^rfrarb8^r
+frarbr>erd8^r<br>cr
+er<brg2r8br
+grdre2
+r1^1^4 v160
+frgra4br>crd4
+erfrg2r1^1^4
+<f8e8a8g8b8a8>c8<b8
+>d8c8e8d8f8e8<b>cr<a
+b1 [r1]99
+;
+
+#1 q7f l16
+
+@14 $ed $7e $f0 v180 y8
+
+r1/
+[<f8>crcrcr]4
+[<e8>crcrcr]4
+[<f8>crcrcr]4
+[<e8>crcrcr]3 
+<e8g8c8g8
+[d8a8d8a8<g8>g8<g8>g8
+c8g8c8g8<a8>a8<a8>a8]3
+[d8a8a8r8]2
+[c8b8b8r8]2
+[e8b8r8b8]2
+e8b8b8b8
+b8r8e8[r1]99;
+
+#2 q7f l16
+
+@14 $ed $7e $f0 v180 y12
+
+r1/r8
+[ararar8^]3
+ararar
+[c8grgrgr]4
+[r8ararar]4
+c8grgrgrc8grgrgr
+c8grgrgrc8g8c8g8
+[d8f8d8f8<g8>d8<g8>d8
+c8e8c8e8<a8>e8<a8>e8]3
+d8f8f8r8d8f8f8r8
+c8g8g8r8c8g8g8r8
+e8g+8r8g+8e8g+8r8g+8
+e8g+8g+8g+8g+8r8e8[r1]99;
+
+#3 q7f l16		; Strings High
+
+@1 o4 $ed $75 $e3 y8 $de $1a $08 $19 v140
+
+r1 / y8 v140
+[a1^1
+g1^1]2
+$ed $77 $e5 y10 v150
+<[f2<g2
+>e2<a2>]3[r1]99
+;
+
+#4 q7f l16 r1 /		; Strings Mid
+
+@1 o4 $ed $75 $e3 y12 $de $1a $08 $19 v150
+
+f1^1 e1^1 f1^1 e1^1
+
+@6 $ed $7a $e8 $de $14 $07 $19 y10 v190
+
+d8e8f4g8a8b4
+>c8<b8e2r4
+d8e8f4g8a8b4
+>c8d8e2r4
+<d8e8f4g8a8b4
+>c8<b8e2r4
+d8c8f8e8g8f8a8g8
+b8a8>c8<b8>d8c8efrd
+e1
+
+@15 $ed $7f $e0 y13 v200
+
+r2^4 o5 e4
+;
+
+#5 q7f l16 r1 /		; String Low + Hit 
+
+@1 o4 $ed $75 $e3 y10 $de $1a $08 $19 v160
+
+[c1^1]4 [r1]8 r1.. 
+
+@15 $ed $7f $e0 y7 $df v200
+
+e4[r1]99
+;
+
+#6 q7f l16 y11 v200
+
+@10 $ed $7f $f8 o4
+
+r2 a8 a4. / v160 [g2]26 g2 g2. g2 g2 g2 g4 [g2]4[r1]99
+;
+
+#7 q7f l16 y8
+
+(80)[v220 @22 f+ r v190 @22 f+ v170 @22 f+]2
+v220 @22 f+ r v230 @22 f+ r4^ / (80)56
+[v220 @22 f+ r v190 @22 f+ v170 @22 f+ v220 @22 f+ r8.]4
+(80)8 r1[r1]99
+;
+                
+
+#amk=1

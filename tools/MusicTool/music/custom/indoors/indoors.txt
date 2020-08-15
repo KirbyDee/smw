@@ -1,0 +1,63 @@
+#am4
+;Legend of Zelda: Wind Waker - Indoors (by Lucas)
+
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+
+#0  	w230 t30
+
+#0	@16	q7F v150 y10
+#1	@14	q7F v160 y10
+#2	@0	q7F v200 y10
+#3	@0	q7F v100 y10
+#5	@1	q7F v200 y10
+
+#0
+l8
+r1/
+[gggggggg
+ffffffff
+d+d+d+d+d+d+d+d+
+<dddddddd>]2
+
+#1
+l16
+o5
+r2^gf+d<agd<a</
+@8
+v200
+g8^>d8^g8^<g8g
+[>dgd8<f8^>c8^f8^<f8f
+>cfc8<d+8^a+8^>d+8^<d+8d+
+a+>d+<a+8d8^a8^>d8^<d8c+]1
+da>d8<g8^>d8^g8^<g8g
+*1
+da>da
+
+#2
+l16
+r1/
+o4
+r[d8c+rd8c+rd8c+
+rdddrc8<br>c8<br>c8<b
+r>cccr<a+8ara+8ara+8a]1
+ra+a+a+a2^8^r4^8
+*1
+ra+a+a+a1
+
+#3
+l16
+r1/
+[r1]4r
+o5
+dc+drd8>dr<d8d
+rd>ddr<c<b>cf>c8crc<b>c
+dc<a+ar<a+aa+>d+a+8a+ra+aa+
+>c<a+agf+32g32f+4^8f+>d2
+
+#5
+l16
+o5
+r2^gf+d<agd<a/
+[r1]8

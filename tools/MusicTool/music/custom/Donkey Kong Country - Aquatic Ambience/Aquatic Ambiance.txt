@@ -1,0 +1,155 @@
+#amk 2
+
+#spc
+{
+	#title   "Aquatic Ambiance"
+	#game    "Donkey Kong Country"
+	#author  "David Wise"
+	#comment "Ported by Samantha"
+}
+
+#instruments
+{
+	@1 $81 $AB $00 $03 $00			; @30 low strings
+	@8 $8E $F2 $00 $1E $00			; @31 envelope 1
+	@6 $8E $F5 $00 $03 $00			; @32 envelope 2
+	@4 $8E $F5 $00 $03 $00			; @33 envelope 3
+	@0 $8E $F5 $00 $03 $00			; @34 envelope 4
+	@13 $8A $AA $00 $03 $00 		; @35 vox
+	@6 $80 $88 $00 $06 $00			; @36 guitar
+	@0 $8E $F8 $00 $06 $00			; @37 harp
+	@6 $88 $86 $00 $03 $00 			; @38 harmonica
+	@0 $87 $A9 $00 $03 $00			; @39 flute
+	@13 $82 $A1 $00 $03 $00			; @40 strings
+	@6 $81 $E1 $00 $03 $00			; @41 strings 2
+	@22 $FC $E0 $00 $07 $00			; @42 tambourine
+	@29 $F8 $E0 $00 $03 $00			; @43 atmospheric perc
+	@0 $CF $28 $00 $06 $00			; @44 piano
+}
+
+
+w200 t30 $F4$02 $EF$FF$D0$30 $F1$06$60$00 $F5$7F$0A$01$01$01$01$01$01
+
+
+;;;=============;;;
+#0;  CHANNEL 1  ;;;
+;;;=============;;;
+o3 y10
+
+	v160 l1 @30 $DE$00$03$19 c^<g+^> (17)[r2]4 c^<g+^f^>d^< $DF / v150 l16
+	[[
+		(1)[@31q7Fc @32c @33q7Ccc @32q7Fc @31c >> @34q7Ccc]4 <<< (2)[@31q7Fg+ @32g+ @33q7Cg+g+ @32q7Fg+ @31g+ >>> @34q7Cg+g+]4 (1)4 (2)4 <<<
+		[@31q7Ff @32f @33q7Cff @32q7Ff @31f >>> @34q7Cff]4 << [@31q7Fd @32d @33q7Cdd @32q7Fd @31d >> @34q7Cdd]4
+	]]2
+
+
+
+;;;=============;;;
+#1;  CHANNEL 2  ;;;
+;;;=============;;;
+
+;Broke this up into different sections to make it easier to read while moderating
+
+"Q1=q7F"
+"Q2=q78"
+
+o5 l32 @35
+
+	;VOX
+	v90y7(3)[Q1dQ2d Q1d+Q2d+ < Q1a+Q2a+ Q1gQ2g >] v110y13* [[v160y7* v130y13*]]2 v110y7* v90y13*
+	v90y7(4)[Q1cQ2c < Q1a+Q2a+ Q1d+Q2d+ Q1fQ2f] v110y13(5)[Q1g+Q2g+ Q1gQ2g Q1d+Q2d+ Q1cQ2c >] [[v160y7(4) v130y13(5)]]2 v110y7(4) v90y13(5)
+	(17)4
+	v90y7(3) v110y13(3) [[v160y7(3) v130y13(3)]]2 v110y7(3) v90y13(3)
+	v90y7(4) v110y13(5) [[v160y7(4) v130y13(5)]]2 v110y7(4) v90y13(5) <
+	v90y7(6)[Q1g+Q2g+ Q1gQ2g Q1cQ2c Q1d+Q2d+] v110y13(7)[Q1g+Q2g+ Q1gQ2g Q1a+Q2a+ Q1fQ2f] [[v160y7(6) v130y13(7)]]2 v110y7(6) v90y13(7) >
+	v90y7(8)[Q1d+Q2d+ Q1dQ2d < Q1gQ2g Q1a+Q2a+ >] v110y13(9)[Q1cQ2c < Q1a+Q2a+ Q1dQ2d Q1fQ2f >] [[v160y7(8) v130y13(9)]]2 v110y7(8) v90y13(9) <
+	
+	/
+	
+	;GUITAR
+	v110 y9 l1 (11)[@36 $DE$00$0F$20 r^g^r^> d^=84 $DD$00$54$B0 ^=108^^ r^4 $DF]
+	
+	;HARP
+	v125 y12 (12)[l48 @37 <<<<a+=5>cd=5d+f=5ga+=5>c<a+=5>cd=5d+f=5ga+=5>c<a+=5>cd=5d+f=5ga+=5>c<a+=5>cd=5d+f=5 $ED$0E$FB ga+=5>c<a+=5gf=5d+d=5 q74 gf=5d+d=5c<a+64>]
+	
+	;HARMONICA
+	v107 l16 (10)[q7F@38 c8 $DD$00$06$B2 c16<g2r8.>c16 $DD$00$03$B2 c16d8d+16d+8. $DD$00$03$B5] (13)[d+16d8.<a+4.a+8. $DD$12$12$B0 d+=128r=28a+8. $DD$12$12$B0 d+=108r4 >]
+	(10) (14)[g16a+8.a+8 $DD$00$18$BC d+4<a+8. $DD$12$12$B0 d+=60>a+8. $DD$12$12$BC d+=60<a+8. $DD$12$12$B0 d+2r8.>]
+	
+	;FLUTE
+	y8 (15)[@39 $DE$18$0F$20 g+16g16g+8g16g+8.g16c4.r16g+16g16g+8g16a+8.g+16g8.] f1^1^8
+
+
+
+;;;=============;;;
+#2;  CHANNEL 3  ;;;
+;;;=============;;;
+o6 v75 l1 @40 $DE$00$0E$35
+
+	d^^^^^d^^^<a+^^^ / [[ [d^<a+^]2 a+^^^ ]]2
+
+
+
+;;;=============;;;
+#3;  CHANNEL 4  ;;;
+;;;=============;;;
+o5 v75 l1 @40 $DE$00$0E$35
+
+	g^^^^^g^^^d+^f^< / [[ [g^d+^]2 d+^f^ ]]2
+
+
+
+;;;=============;;;
+#4;  CHANNEL 5  ;;;
+;;;=============;;;
+o5 v75 l1 @40 $DE$00$0E$35
+
+	d+^^^^^d+^^^c^^^< / [[ [d+^c^]2 c^^^ ]]2
+
+
+
+;;;=============;;;
+#5;  CHANNEL 6  ;;;
+;;;=============;;;
+"X=$DD$00$60"
+o6 v65 y7 l2 @41
+
+	(16)[cX$BD^X$BE^X$BF^X$C0^X$C1^X$C2^X$C3^X$C4^X$C5^X$C6^X$C7^X$C8] < d+X$B4^X$B5^X$B6^X$B7^X$B8^X$B9^X$BA^X$BB^X$BC^X$BD^X$BE^X$BF^X$C0^X$C1^X$C2^X$C3 < / l16
+	[v160@42 y8q5Fcy12q5Dcy8q5Bcy12q59c << y10q7E@43a2.]12 >>
+	[
+		$F4$03 v200y10@21q7Feq7Ceq79eq76e $F4$03 v175@42 y8q5Fcy12q5Dcy8q5Bcy12q59c >
+		$F4$03 v150@37y10$ED$0E$FDq4Fd+q4Cd+q49d+q46d+ < $F4$03 v175@42 y8q5Fcy12q5Dcy8q5Bcy12q59c
+	]12
+
+
+
+;;;=============;;;
+#6;  CHANNEL 7  ;;;
+;;;=============;;;
+o5 v60 l16 @35
+
+	r
+	v50y13dd+<a+g> v70y7dd+<a+g> [[v120y13dd+<a+g> v90y7dd+<a+g>]]2 v70y13dd+<a+g> v50y7dd+<a+g>
+	v50y13c<a+d+f v70y7g+gd+c> [[v120y13c<a+d+f v90y7g+gd+c>]]2 v70y13c<a+d+f v50y7g+gd+c>
+	r1^1
+	v50y13dd+<a+g> v70y7dd+<a+g> [[v120y13dd+<a+g> v90y7dd+<a+g>]]2 v70y13dd+<a+g> v50y7dd+<a+g>
+	v50y13c<a+d+f v70y7g+gd+c> [[v120y13c<a+d+f v90y7g+gd+c>]]2 v70y13c<a+d+f v50y7g+gd+c
+	v50y13g+gcd+ v70y7g+ga+f [[v120y13g+gcd+ v90y7g+ga+f]]2 v70y13g+gcd+ v50y7g+ga+f
+	v50y13>d+d<ga+> v70y7c<a+df [[v120y13>d+d<ga+> v90y7c<a+df]]2 v70y13>d+d<ga+> v50y7c<a+d
+	/
+	v85y11l1 r8 (11) v75y8 (12) v65l16 (10)(13)(10)(14) v75y12 (15) >f1^1
+
+
+
+;;;=============;;;
+#7;  CHANNEL 8  ;;;
+;;;=============;;;
+o6 v50 y13 l2 @41
+
+	r8 (16) < d+X$B4^X$B5^X$B6^X$B7^X$B8^X$B9^X$BA^X$BB^X$BC^X$BD^X$BE^X$BF^X$C0^X$C1^X$C2^4.X$C3 < /
+	(17)8 r4. v110 l16 @44 >
+	y7 dd+a+ y13q7C dd+a+ y7q79 dd+a+ y13q76 dd+r=60 y7q7F dd+a+ y13q7C dd+a+ y7q79 dd+a+ y13q76 d>
+	@34 q7Fd=5d=7d+=5d+=7<a+=5a+=7> q7Cd=5d=7d+=5d+=7<a+=5a+=7> q78d=5d=7d+=5d+=7<a+=5a+=7> q74d=5d=7d+=5d+=7<a+=5a+24 r1^=47
+	@44 q7Fg+ga+fg+gcd+ q7Cg+ga+fg+gcd+ q79g+ga+fg+gcd+ q76g+ga+fg+gcd+
+	(17)24
+	[$E8$FF$2D v110l24q7Fa+16<a+>q78a+48q7Fa+<q78a+48q7Fa+>q78a+48q7Fa+<q78a+48q7Fa+>q78a+48q7Fa+<q78a+48q7Fa+>q78a+16< $ED$4F$3D q7Fa+=88]2

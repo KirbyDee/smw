@@ -1,0 +1,90 @@
+#amk 2
+
+#SPC
+{
+#title "SMB1 Snow"
+#author "Koji Kondo"
+#game "Super Mario Maker 2"
+}
+
+$EF$3E$D0$D0
+$F1$03$5F$01
+
+$F4$02
+
+#path "smb1_snow"
+#samples
+{
+#optimized
+"Tambourine.brr"
+"smas-14.brr"
+}
+
+#instruments
+{
+"Tambourine.brr" 	$8F $E4 $B8 $05 $50 ;30
+"smas-14.brr"		$ff $e0 $00 $03 $00	;31
+}
+
+
+#0 w255 t68
+@31 v100 o4 l16 y11
+
+(1)[b r4 r b r>c r4 r c r d r4 r d r c r4 r c r<]2
+/
+[[ (1)4
+
+>e r4 r e r f+ r4 r f+ r d r4 r d r e r4 r e r c r4 r c r d r4 r d r c r4 r c r<a r4 r a r ]]2
+
+b1>c1<a1 b1 b1>c1<a1 b1
+
+
+#1
+@31 v100 o4 l16 y9
+
+(2)[g r4 r g r a r4 r a r b r4 r b r a r4 r a r]2
+/
+[[ (2)4
+
+g r4 r g r>c r4 r c r< g r4 r g r g+ r4 r g+ r e r4 r e r f+ r4 r f+ r e r4 r e r c r4 r c r ]]2
+
+g1 a1 f+1 g1 g1 a1 f+1 g1
+
+#2
+@30 v80 o4 l4
+(6)[y12 c y8 c]8 
+/
+(6)48 [r2]8 (6)8
+
+#3 
+v125 o4 $DE$12$0A$40
+[r2]8
+/
+[@0 r8 d8 g8>d8 c4<b4 a4 f+4 e4 f+8^16 f32 e32 d1 r1 r8 
+d8 g8>d8 c4<b4 a4 f+4 e4 f+8^16 g32 g+32 b1 r1 r8
+e8 g8>e8 d4 c4<b4 a8^16 g+32 a32 g+2 r8
+c8 g8>c8<b4 a8^16 g32 f+32 g2 f+2]2
+
+@8 <<[g4]32  >> 
+
+#4
+@3 v125 o4
+[r2]8
+/
+[r2]29 r8 d8 g8>d8 c4<b4 a4 f+2
+r4 r2 r1 r2 r8
+d8 g8>d8<b4 a2 r4 r8 d8 g8>e8<b8 d8 g8>e8<a4 g4 g+4 d4 r8<g8>d8 g8 d8<a8>d8 g8 a4 g4 f+4 d4<b1>
+
+[r2]14
+
+#5
+@1 v60 o4 l2
+(10)[b>c d c<]2
+/
+(10)12 [r2]16
+
+#6
+@1 v60 o4 l2
+(11)[g a b a]2
+/
+(11)12 [r2]16

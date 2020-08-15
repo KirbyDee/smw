@@ -1,0 +1,8 @@
+01 carryable-pipe/carryable-pipe.cfg
+02 piranha-sideways/piranha_sideways.cfg
+03 sideways_springboard/sideways_springboard.cfg
+04 SleepyGoomba/SleepyGoomba.cfg
+05 pendulumRGP/rotating-gray-platform-pendulum.cfg
+06 FallingSpike/FallingSpike.cfg
+07 Revive_Block/revive.cfg
+08 BanzaiBill/banzai_bill_9F.cfg

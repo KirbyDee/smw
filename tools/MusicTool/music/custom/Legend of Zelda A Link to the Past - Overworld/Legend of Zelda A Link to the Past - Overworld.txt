@@ -1,0 +1,160 @@
+(!30)[$F6 $05 $7F]
+(!31)[$F6 $05 $FF]
+(!32)[$F6 $15 $7F]
+(!33)[$F6 $15 $FF]
+(!34)[$F6 $25 $7F]
+(!35)[$F6 $25 $FF]
+(!36)[$F6 $35 $7F]
+(!37)[$F6 $35 $FF]
+(!38)[$F6 $45 $7F]
+(!39)[$F6 $45 $FF]
+(!40)[$F6 $75 $7F]
+(!41)[$F6 $75 $FF]
+(!42)[$F6 $65 $7F]
+(!43)[$F6 $65 $FF]
+(!44)[$F6 $35 $FB]
+(!45)[$F6 $45 $FB]
+
+#samples
+{
+	#default
+	#optimized
+	"default/00 SMW @0.brr"
+	"default/01 SMW @1.brr"
+	"default/02 SMW @2.brr"
+	"default/03 SMW @3.brr"
+	"default/04 SMW @4.brr"
+	"default/05 SMW @8.brr"
+	"default/06 SMW @22.brr"
+	"default/07 SMW @5.brr"
+	"default/08 SMW @6.brr"
+	"LOZ3 Overworld/Trombone.brr"
+	"default/0A SMW @9.brr"
+	"default/0B SMW @10.brr"
+	"default/0C SMW @13.brr"
+	"LOZ3 Overworld/Brass.brr"
+	"default/0E SMW @29.brr"
+	"default/0F SMW @21.brr"
+	"default/10 SMW @12.brr"
+	"optimized/11 SMW @17.brr"
+	"optimized/12 SMW @15.brr"
+	"optimized/13 SMW Thunder.brr"
+	"LOZ3 Overworld/Snare.brr"
+	"LOZ3 Overworld/Crash Cymbal.brr"
+	"LOZ3 Overworld/Strings.brr"
+	"LOZ3 Overworld/Timpani.brr"
+}
+#instruments
+{
+	"LOZ3 Overworld/Brass.brr" $FF $E0 $BD $06 $00
+	"LOZ3 Overworld/Trombone.brr" $FF $E0 $BB $05 $00
+	"LOZ3 Overworld/Snare.brr" $FF $E0 $B8 $05 $B0
+	"LOZ3 Overworld/Crash Cymbal.brr" $FF $F0 $B9 $04 $00
+	"LOZ3 Overworld/Strings.brr" $FB $EA $B7 $03 $D0
+	"LOZ3 Overworld/Timpani.brr" $FF $E0 $B4 $0B $A0
+}
+#amk 2
+
+
+$EF $FF $1B $E5
+$F1 $06 $5A $01
+w200
+
+#0(!30, 3)(!31, -1)$F4 $02t27
+v205@30y11 $DE $10 $1E $2A
+(1)[o4q7Fa+4r12q4Ca+48a+48q2Ba+24a+24a+24
+[[q7Fa+24r24q7Cg+24q7Fa+8^12q4Da+48a+48q2Ca+24a+24a+24]]2
+q7Fa+16q7Bf32f32q7Cf16f32f32q7Df16f32f32q7Ff16]f16/v190
+t27(2)[q7Fa+16r16f8..a+32a+32>c32d32d+32f4r16f16f24f+24g+24]
+(3)[a+4r12a+24a+24g+24f+24g+24r24f+24f4f8d+32r32d+32f32q5Ff+4q7Ff16d+16c+32r32c+32d+32q5Ff4
+q7Fd+16c+16c32r32c32d32e4g8]
+(4)[q2Ff16<q4Ff32f32q7Ff16q4Ff32f32q7Ff16q4Ff32f32q7Ff16f16]
+(2)
+(5)[>q6Fa+4.>q7Fc+8c16r16<a4f8f+4.a+8a16r16f4f8f+4.a+8a16r16f4d8d+4.
+f+8f16r16c+4<a+8>c32r32c32d32e4g8]
+(4)
+
+#1(!32, 3)(!33, -1)@31v195y9
+o2q4Fa+8q1Ba+24a+24a+24q4Fa+8q1Ba+24a+24a+24
+q4Fg+8q1Bg+24g+24g+24q4Fg+8q1Bg+24g+24g+24
+q4Ff+8q1Bf+24f+24f+24q4Ff+8q1Bf+24f+24f+24
+q4Df8f8f8q4Fg16a16/
+v185(12)[q4Fa+8a+24a+24g+24a+8a+8g+8g+24g+24f+24g+8g+8]
+q4Ff+8f+24f+24e24f+8f+8>q4Dc+8c+24c+24c24c+8c+8<b8b24b24a+24b8b24b24b24a+8a+24a+24g+24a+8a+24a+24a+24
+>c8c24c24<b24>c8c24c24c24<q4Ff8f8f8g16a16
+(12)
+q4Ff+8f+24f+24e24f+8f+8f8f24f24d+24f8f8
+[[q2Fe24a+24>q2Dc+24e24a+24>c+24q4De8r8q4Cf8<<q4Ff24f24f24f8r8]]2
+q4Db8b24b24a+24b8b24b24b24a+8a+24a+24g+24
+a+8a+24a+24a+24>c8c24c24<b24>c8c24c24c24<q4Ff8f8f8g16a16
+
+#2(!34, 3)(!35, -1)@30v185y7 $DE $10 $1E $2A 
+o4q7Ff4r12q7Cf24q2Bf24f24f24
+q7Ff24r24q7Cd+24q7Ff8^12q2Cf24f24f24f24
+q7Ff24r24q7Cd+24q7Ff8^12>y5q2Ea+48a+48a+24a+24a+24
+q7Fa+16<y7$E3 $54 $16 q7Bf+32f+32g16g32g32q7Dg+16g+32g+32q7Fa16a16/
+v185
+(6)[q7Fd16r16<a+8..>d32d32d+32f32g32g+4r16g+16g+24a+24>c24]
+c+4r12c+24c+24c24<a+24>c24r24<a+24g+4g+8f+32r32f+32g+32q5Fa+4q7Fg+16f+16f32r32f32f+32q5Fg+4
+q7Ff+16f16e32r32e32f32g4a+8
+(7)[q2Fa16<q4Fa32a32q7Fa16q4Fa32a32q7Fa16q4Fa32a32q7Fa16a16]
+(6)
+>>q6Fc+4.q7Fe8d+16r16c4<a8a+4.>c+8c16r16<a4a8a+4.>c+8c16r16<a4f8f+4.
+b8a+16r16f4c+8e32r32e32f32g4a+8
+(7)
+
+#3(!36, 3)(!37, -1)@30v185y13 $DE $10 $1E $2A
+o4q7Fc4r12q7Cc24q4Bc24c24c24
+q7Fc24r24q7Cc24q7Fc8^12q2Cc24c24c24c24
+q7Fc+24r24q7Cc+24q7Fc+8^12>y15q2Ef48f48f24f24f24
+q7Ff16y13<<q7Ba+32a+32b16b32b32q7D>c16c32c32q7Fc+16c+16/r8
+(!36, 3)(!44, -1)$DFv204@34y14
+(8)[o3q7Fa+8f4^16.a+32a+32>c32d32d+32f4r16.<f+32f+32g+32a+32>c32q4Fc+8<f+8]
+q7Ff8^24f24d+24f4f+8q2Ff+16q7Ff+32g+32a+4f8q2Ff16q7Ff32f+32g+4
+(9)[e8e16e32e32g16g32a32a+16>c16<a4a4r8]
+(8)
+f4a4
+[[e8a+4.a4f4]]2
+f+8f+32r32f+32f32f+4f8f32r32f32d+32f4
+(9)
+
+#4(!38, 3)(!39, -1)@31v160y9
+o3q4Ff8q1Bf24f24f24q4Ff8q1Bf24f24f24
+q4Fd+8q1Bd+24d+24d+24q4Fq2Fd+8q1Bd+24d+24d+24
+q4Fc+8q1Bc+24c+24c+24q4Fc+8q1Bc+24c+24c+24
+v180@35o1y10q7Ff4f4/
+[[r2]]7
+o1q7Ff4f8f8[[r2]]4
+@34v204y14(!38, 3)(!45, -1)
+[[o3a+8>e8g4c4<a4]]2
+[[r2]]3(!38, 3)(!39, -1)
+y10v180@35o1f4f8f8r8
+
+#5v165@32[[o4q7Ff32q77f32q78f32f32q79f32f32q7Af32q7Bf32q7Ff8f24q7Df24f24]]3
+v180q7Cf64f16..f64f16..f64f16..q7Ff16f16/v180
+(10)[q7Ff8q7Cf24q7Bf24f24q7Ff16f16q7Bf32q7Af32f32f32]7
+(11)[q7Ff16q7Bf32f32q7Ff16q7Bf32f32q7Ff16q7Df32q7Cf32f32q7Bf32f32f32]
+(10)4
+[[q7Ff32q7Cf32f32q7Af32f32f32f32q7Cf32q7Ff16f16q7Bf32f32f32f32
+(10) ]]2
+(10)3(11)
+[[r1]]100
+
+#6^64v165@32[[@32o4q79f32q77f32q78f32f32q79f32f32q7Af32f32^4]]2
+q77f32f32q78f32f32q79f32f32q7Af32f64^4
+(!42, 3)(!43, -1)@33o4q2Fy8v200d4d4/
+[[r2]]12
+[[v200y10@32o2q72a+32a+32q73a+32a+32q74a+32a+32q75a+32a+32@33o4q7Fd4.
+@35o1q7Cf24f24f24f4]]2
+[[r1]]100
+
+#7(!40, 3)(!41, -1)v125@30^16y5
+(1)/>>>q7Df16(2)(3)(4)(2)(5)(4)
+
+#SPC
+{
+	#title "Overworld"
+	#game "Legend of Zelda: A Link to the P"
+	#author "Koji Kondo, ggamer77"
+	#length "1:55"
+}

@@ -1,0 +1,165 @@
+#am4
+;-- HEADER AUTOMATICALLY GENERATED --
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+;-- END OF HEADER -------------------
+
+; Hyrule Castle (The Legend of Zelda: The Wind Waker)
+; Original Composer: Koji Kondo
+; Port by Holy Order Sol
+
+#0 w242 t29 l8
+
+#0	q7f v230 y8
+#1 @18	q7f v125 y10
+#6 @1	q7f v200 y9
+#7 @11	q7f v200 y11
+#4	q7f  y12
+#5	q7f v200 y10
+#2 @4	q7f v200 y11
+#3 @6	q7f v230 y9
+
+
+
+#0
+$ED $3C $2C
+$EE $1B
+@0 p32,60
+f2
+g4a2b2^
+rb4^g4^
+b4a4d2^
+r/
+@6 p0,0
+o4[d2
+<a2r4^>d
+d+f^16c+16^32f16^32d2
+<a2r1>]2
+r1^4
+@2 p0,0
+o6
+[q7f d q74 d< q7f a q74 a> q7f a q74 a q7f d q74 d]
+r1^1^1
+*
+r1^2^4
+@11 p0,0 q7f
+o5
+[d+rd+r
+drdrc+rc+r
+crcr]2
+[cr]8
+[dr]4
+d2
+c+4^^16r16
+@0 p32,60 o4
+[f2
+g4a2b2^
+rb4^g4^
+b4a4d2^
+r]2
+;
+
+#4
+@9 v200
+r1^1^1^1/
+@9 v200
+o3
+[d4r1^2^4]8
+d+4r2^4
+d4r2^4
+d+r2^4^
+d4r2^4
+f4r2^4
+d+4r2^4
+e4r2^4^32
+@11 v230
+o5e2e2
+[r1]100;
+
+#1
+$ED $5F $E3
+r1^1^1^1/
+<
+[ararararbrbrarar]7
+ararararg+rg+r
+[arara+ra+r
+a+ra+rarar]2
+[ar]10
+
+a+ra+r
+a+ra+ra2
+a4^^16r1^1^1^1^16
+d1^1^1^2^4^^16
+;
+#6
+$ED $5F $E3
+r1^1^1^1/
+<[drdr
+drdrdrdr
+d+rd+r]7
+[dr]8
+
+grgr
+grgrf+rf+r
+f+rf+rgrgr
+grgrf+rf+r
+f+rf+rfrfr
+frfrd+rd+r
+d+rd+rerer
+erer<a2
+a4^^16r1^1^1^1^16
+>d1^1^1^2^4^^16
+;
+#5
+@9
+r1^1^1^1/
+@9
+o3
+[drdr
+drdrdrdr
+d+rd+r]7
+[dr]7
+dr1^2^
+@2
+o5aa+>{c8<a+8a8}gr1^4^
+aa+>{c8<a+8a8}gr2^4^
+o4d+rd+r
+d+rd+rerer
+ere
+[r1]100;
+#7
+r1^1^1^1/
+<
+[frfr
+frfrg+rg+r
+grgr]7
+[fr]8
+[grgr
+grgrf+rf+r
+f+rf+r]2
+frfr
+frf
+[r1]100;
+
+
+#2
+r1^1^1^1/
+[r1]16
+>[c4^<a+16a16
+ga>cfd2^4^r]2
+c4^<a+16a16
+ga>cdf4^d+16d16
+cdd+fg4^f16e16
+defga2^4^^16
+[r1]100
+;
+
+#3
+r1^1^1^1/
+[r1]20
+>c4^<a+16a16
+ga>cdf4^d+16d16
+cdd+fg4^f16e16
+defga2^4^^16
+[r1]100;
